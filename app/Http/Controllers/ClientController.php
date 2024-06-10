@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Client;
+use App\Http\Controllers\Validator;
 
 class ClientController extends Controller
 {
@@ -21,27 +22,28 @@ class ClientController extends Controller
 
     public function store (Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|String',
-            'email' => 'required|email',
-            'number' => 'required|digits:10',
-        ]);
-        if($validator->fails()){
-            return response()->json(
-                [
-                    'status' => 422,
-                    'eroors' => validator->messages()
-                ],
-            422);
-        }
-        else {
+        // $validator = Validator::make($request->all() ,
+        // [
+        //     'name' => 'required|String',
+        //     'email' => 'required|email',
+        //     'number' => 'required|digits',
+        // ]);
+        // if($validator->fails()){
+        //     return response()->json(
+        //         [
+        //             'status' => 422,
+        //             'eroors' => validator->messages()
+        //         ],
+        //     422);
+        // }
+        // else {
             $client = Client::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'number' => $request->number,
             ]);
 
-            if($students){
+            if($client){
                 return response()->json([
                     'status' => 200,
                     'message' => "Client Created successfully"
@@ -52,7 +54,7 @@ class ClientController extends Controller
                     'message' => "Problem while creating Client"
                 ],500);
             }
-        }
+        // }
     }
 
     public function show($id)
@@ -90,23 +92,23 @@ class ClientController extends Controller
 
     public function update (Request $request, int $id)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|String',
-            'email' => 'required|email',
-            'number' => 'required|digits:10',
-        ]);
-        if($validator->fails()){
-            return response()->json(
-                [
-                    'status' => 422,
-                    'eroors' => validator->messages()
-                ],
-            422);
-        }
-        else {
+        // $validator = Validator::make($request->all(), [
+        //     'name' => 'required|String',
+        //     'email' => 'required|email',
+        //     'number' => 'required|digits:10',
+        // ]);
+        // if($validator->fails()){
+        //     return response()->json(
+        //         [
+        //             'status' => 422,
+        //             'eroors' => validator->messages()
+        //         ],
+        //     422);
+        // }
+        // else {
             $client = Client::find($id);
 
-            if($students){
+            if($client){
                 $client->update([
                     'name' => $request->name,
                     'email' => $request->email,
@@ -123,7 +125,7 @@ class ClientController extends Controller
                     'message' => "Problem while Updating Client"
                 ],404);
             }
-        }
+        // }
     }
 
     public function destroy ($id) {
