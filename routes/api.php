@@ -10,4 +10,7 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/client', [ClientController::class, 'index']);
 Route::post('/client', [ClientController::class, 'store']);
-Route::get('/client/{id}', [ClientController::class, 'index']);
+Route::get('/client/{id}', [ClientController::class, 'show']);
+Route::get('/client/{id}/edit', [ClientController::class, 'edit']);
+Route::put('/client/{id}/update', [ClientController::class, 'update']);
+Route::delete('/client/{id}/delete', [ClientController::class, 'destroy']);
