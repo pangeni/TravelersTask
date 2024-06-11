@@ -1,17 +1,7 @@
 ## Documentation for REST API 
 
-<!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as: -->
-<!-- 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting). -->
+REST API communicate with HTTP requests to perform standard database functions like creating, reading, updating and deleting records. All HTTP methods can be used in API calls. A well-designed REST API is similar to a website running in a web browser with built-in HTTP functionality.
 
-Rest API is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Rest API
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+In API the state of resource can be delivered to a client in virtually in any format like JSON, HTML, PHP or plain Text. Request headers and parameters are also important in REST API calls because they include important identifier information such as URIs, caching, cookies, authorizations, metadata and more. Request headers and response headers, along with conventional HTTP status codes, are used within well-designed REST APIs.
+## Securing REST API
+Securing REST API also starts with industry best practices. Use hashing algorithms for password security and HTTPS for secure data transmission. An authorization framework can help limit the privileges of third-party applications. Using a timestamp in the HTTP header, an API can also reject any request that arrives after a certain time period. Parameter validation and JSON Web Tokens are other ways to ensure that only authorized clients can access the API.
