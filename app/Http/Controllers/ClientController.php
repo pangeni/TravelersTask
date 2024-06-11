@@ -135,7 +135,7 @@ class ClientController extends Controller
             return response()->json([
                 'status' => 200,
                 'message' => "Sucessfully deleted"
-            ],404);
+            ],200);
 
         } else{
             return response()->json([
