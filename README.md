@@ -12,20 +12,26 @@ Securing REST API also starts with industry best practices. Use hashing algorith
 
 ![alt text](GET-method.png)
 
-- A POST request creates a new record.
+- A POST request to creates a new record.
+
 ![alt text](POST.png)
 
-- A POST request creates a new record.
+- A POST request to validate record.
+
 ![alt text](POST-validation.png)
 
-- To update records we need to get request for edit.
+- A EDIT records to GET request for edit.
+
 ![alt text](EDIT.png)
 
-- A PUT request updates a record. 
+- A PUT request to updates a record. 
+
  ![alt text](UPDATE.png)
 
-- A DELETE request deletes. 
+- A DELETE request to delete. 
+
  ![alt text](DELETE.png)
 
- - Deleted records in GET method.
+ - A Deleted records in GET method.
+
   ![alt text](DELETE-get.png)
